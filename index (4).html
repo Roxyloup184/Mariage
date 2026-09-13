@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notre mariage | 26 décembre 2027</title>
+<meta name="description" content="Toutes les informations pour notre mariage et votre confirmation de présence.">
+https://fonts.googleapis.com
+<link://fonts.gstatic.com
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="
+*{
+  box-sizing:border-box;
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#292723;
+  --muted:#706b63;
+  --cream:#f8f5ef;
+  --paper:#fffdf9;
+  --accent:#8b6f52;
+  --line:#ddd5c8;
+  --dark:#292723;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--ink);
+  line-height:1.6;
+
+  /* Fond de page */
+  background-image:url("fondnoel.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  background:rgba(248,245,239,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:12px 10px;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+nav a{
+  color:var(--ink);
+  text-decoration:none;
+}
+
+.hero{
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:90px 20px 50px;
+  background:rgba(255,253,249,0.75);
+}
+
+.hero-inner{
+  max-width:850px;
+}
+
+.kicker{
+  font-family:Arial,sans-serif;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-size:.75rem;
+  color:var(--accent);
+}
+
+h1{
+font-family:'Allura', cursive;
+  font-size:clamp(3.5rem,10vw,7rem);
+  font-weight:normal;
+  line-height:.95;
+  margin:25px 0 18px;
+}
+
+.date{
+  font-size:1.5rem;
+  letter-spacing:.12em;
+}
+
+.place{
+  color:var(--muted);
+  margin-top:8px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:13px 24px;
+  background:var(--dark);
+  color:#fff;
+  text-decoration:none;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  border-radius:2px;
+}
+
+section{
+  padding:80px 20px;
+  background:rgba(255,253,249,0.92);
+}
+
+.container{
+  max-width:980px;
+  margin:auto;
+}
+
+.section-title{
+font-family: 'Allura', cursive;
+  text-align:center;
+  font-size:4.2rem;
+  font-weight:normal;
+  margin:0 0 35px;
+}
+
+.intro{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto;
+  color:var(--muted);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:40px;
+}
+
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:28px;
+  text-align:center;
+}
+
+.card h3{
+  font-weight:normal;
+  margin-top:0;
+}
+
+.timeline{
+  max-width:650px;
+  margin:35px auto 0;
+}
+
+.event{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+
+.time{
+  font-weight:bold;
+  color:var(--accent);
+}
+
+.menu{
+  background:rgba(238,232,221,.92);
+}
+
+.form-wrap{
+  max-width:680px;
+  margin:30px auto 0;
+  background:var(--paper);
+  padding:35px;
+  border:1px solid var(--line);
+}
+
+label{
+  display:block;
+  margin:18px 0 7px;
+  font-family:Arial,sans-serif;
+  font-size:.82rem;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #cfc6b8;
+  background:#fff;
+  font:inherit;
+  border-radius:2px;
+}
+
+.radio-group{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.radio-group label{
+  margin:0;
+}
+
+.radio-group input{
+  width:auto;
+}
+footer{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:45px 20px;
+background:var(--dark);
+color:#fff;
+}
+button{
+display:block;
+margin:25px auto;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#horaire">Horaire</a>
+<a href="#lieu">Lieu</a>
+<a href="#repas">Repas</a>
+<a href="#rsvp">RSVP</a>
+</nav>
+
+<header class="hero" id="accueil">
+<div class="hero-inner">
+<div class="kicker">Bienvenue au mariage de</div>
+<h1>Roxanne et Gabriel</h1>
+<div class="date">26 décembre 2027</div>
+<div class="place">Place de la traversée, Roberval · Lac-Saint-Jean</div>
+<p class="intro" style="margin-top:25px">
+Après tant d'années à rêver de cette journée, nous avons hâte de la partager avec vous.
+</p>
+<a class="btn" href="#rsvp">Confirmer ma présence</a>
+</div>
+</header>
+
+<section>
+<div class="container">
+<h2 class="section-title">Bienvenue</h2>
+<p class="intro">
+Bienvenue sur notre site de mariage. Vous trouverez ici toutes les informations importantes
+pour la journée, ainsi que le formulaire pour confirmer votre présence et choisir votre repas.
+</p>
+<div class="cards">
+<div class="card"><h3>❄️</h3><strong>Une journée d'hiver</strong><p>Le 26 décembre, au cœur du Lac-Saint-Jean.</p></div>
+<div class="card"><h3>💍</h3><strong>La cérémonie</strong><p>Un moment intime pour célébrer notre engagement.</p></div>
+<div class="card"><h3>🥂</h3><strong>La réception</strong><p>Souper, musique, danse et célébration avec vous.</p></div>
+</div>
+</div>
+</section>
+
+<section id="horaire">
+<div class="container">
+<h2 class="section-title">La journée</h2>
+<div class="timeline">
+<div class="event"><div class="time">14 h 45</div><div><strong>Arrivée des invités</strong><br><span class="note">Accueil et installation</span></div></div>
+<div class="event"><div class="time">15 h 00</div><div><strong>Cérémonie</strong><br><span class="note">Cérémonie de mariage</span></div></div>
+<div class="event"><div class="time">15 h 30</div><div><strong>Photos & cocktail</strong><br><span class="note">Musique et divertissements, pendant que nous prenons les photos</span></div></div>
+<div class="event"><div class="time">18 h 00</div><div><strong>Souper</strong><br><span class="note">Service du repas et discours</span></div></div>
+<div class="event"><div class="time">20 h 00</div><div><strong>Soirée dansante</strong><br><span class="note">Musique, jeux, danse et célébration</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="lieu" class="menu">
+<div class="container">
+<h2 class="section-title">Lieu & informations</h2>
+<p class="intro">
+<strong>Place de la traversée </strong>
+1130, boulevard Saint-Joseph à Roberval</p>
+<div class="cards">
+<div class="card"><h3>🚗 Stationnement</h3><p>Entrée principale devant l'édifice. </p></div>
+<div class="card"><h3>🏨 Hébergement ou retour à la maison</h3><p>Vous pouvez loger au Chateau Roberval, prendre un taxi ou bien nez-rouge pour votre retour en toute sécurité.</p></div>
+<div class="card"><h3>🎉 Plaisir</h3><p>Ayez autant de plaisir que nous! </p></div>
+</div>
+</section>
+
+<section id="repas">
+<div class="container">
+<h2 class="section-title">Le menu</h2>
+<p class="intro">Voici les choix proposés.</p>
+<div class="cards">
+<div class="card"><h3>Filet de bœuf</h3><p>Accompagnement de saison et sauce maison.</p></div>
+<div class="card"><h3>Poulet</h3><p>Plat principal accompagné de légumes et pommes de terre.</p></div>
+<div class="card"><h3>Végétarien</h3><p>Une option végétarienne savoureuse et complète.</p></div>
+</div>
+</div>
+</section>
+
+<section id="rsvp" class="menu">
+<div class="container">
+<h2 class="section-title">Confirmer votre présence</h2>
+<p class="intro">Merci de répondre avant le 1er septembre 2027.</p>
+
+<div class="form-wrap">
+<form id="rsvpForm">
+<div id="guestFields">
+<label>Présence *</label>
+<div class="radio-group">
+<label><input type="radio" name="attendance" value="Oui" required> Oui, je serai présent(e)</label>
+<label><input type="radio" name="attendance" value="Non"> Non, je ne pourrai pas venir</label>
+</div>
+
+<h3>Invités supplémentaires et choix des repas</h3>
+
+<label>Invité 1</label>
+<input type="text" placeholder="Nom complet">
+
+<select>
+  <option>Choix du repas</option>
+  <option>Bœuf</option>
+  <option>Poulet</option>
+  <option>Végétarien</option>
+</select>
+
+<label>Invité 2</label>
+<input type="text" placeholder="Nom complet">
+
+<select>
+  <option>Choix du repas</option>
+  <option>Bœuf</option>
+  <option>Poulet</option>
+  <option>Végétarien</option>
+</select>
+
+<label>Invité 3</label>
+<input type="text" placeholder="Nom complet">
+
+<select>
+  <option>Choix du repas</option>
+  <option>Bœuf</option>
+  <option>Poulet</option>
+  <option>Végétarien</option>
+</select>
+
+<label>Invité 4</label>
+<input type="text" placeholder="Nom complet">
+
+<select>
+  <option>Choix du repas</option>
+  <option>Bœuf</option>
+  <option>Poulet</option>
+  <option>Végétarien</option>
+</select>
+
+<label for="allergies">Allergies ou restrictions alimentaires</label>
+<textarea id="allergies" name="allergies" rows="3" placeholder="Aucune, ou précisez-les ici"></textarea>
+</div>
+
+<label for="message">Petit mot pour les mariés (facultatif)</label>
+<textarea id="message" name="message" rows="3"></textarea>
+
+<p class="note">
+Pour les familles plus nombreuses, veuillez inscrire le noms des enfants et leur choix de menu ici.
+</p>
+
+<button type="submit">Envoyer ma réponse</button>
+<div class="success" id="success">Merci! Votre réponse a été enregistrée sur cet appareil. ❤️</div>
+</form>
+</div>
+</section>
+
+<footer>
+<div>Avec amour · 26 décembre 2027</div>
+<div style="opacity:.7;margin-top:8px">Notre mariage</div>
+</footer>
+
+<script>
+const form=document.getElementById('rsvpForm');
+const guestFields=document.getElementById('guestFields');
+document.querySelectorAll('input[name="attendance"]').forEach(r=>{
+ r.addEventListener('change',()=>{
+   guestFields.style.display=r.value==="Oui"&&r.checked?"block":"none";
+ });
+});
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ const data=Object.fromEntries(new FormData(form).entries());
+ data.date_envoi=new Date().toISOString();
+ const saved=JSON.parse(localStorage.getItem('rsvp_mariage')||'[]');
+ saved.push(data);
+ localStorage.setItem('rsvp_mariage',JSON.stringify(saved));
+ document.getElementById('success').style.display='block';
+ form.reset();
+ guestFields.style.display='block';
+ window.scrollTo({top:document.getElementById('success').offsetTop-120,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
