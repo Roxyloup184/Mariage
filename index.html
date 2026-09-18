@@ -146,11 +146,14 @@ font-family: 'Allura', cursive;
   color:var(--muted);
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:18px;
-margin-top:40px;
+.card{
+background:var(--paper);
+border:1px solid var(--line);
+padding:28px;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
 .card h3{
