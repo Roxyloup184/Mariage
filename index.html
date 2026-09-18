@@ -381,32 +381,36 @@ pour la journée, ainsi que le formulaire pour confirmer votre présence et choi
 
 <label>Invité 1</label>
 <input type="text" name="invite1" placeholder="Nom complet">
+
 <select name="repas1">
-  <option>Choix du repas</option>
+  <option value="">Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 2</label>
 <input type="text" name="invite2" placeholder="Nom complet">
+
 <select name="repas2">
-  <option>Choix du repas</option>
+  <option value="">Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 3</label>
 <input type="text" name="invite3" placeholder="Nom complet">
+
 <select name="repas3">
-  <option>Choix du repas</option>
+  <option value="">Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 4</label>
 <input type="text" name="invite4" placeholder="Nom complet">
+
 <select name="repas4">
-  <option>Choix du repas</option>
+  <option value="">Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
@@ -441,7 +445,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const data = Object.fromEntries(
-      new FormData(form).entries()
+    new FormData(form).entries()
   );
 
   try {
@@ -454,13 +458,15 @@ form.addEventListener('submit', async (e) => {
       }
     );
 
-    alert("Merci ! Votre réponse a bien été enregistrée.");
+    alert('Merci ! Votre réponse a été enregistrée.');
 
     form.reset();
 
   } catch (error) {
 
-    alert("Erreur lors de l'envoi.");
+    alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+
+    console.error(error);
 
   }
 
