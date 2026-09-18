@@ -380,36 +380,32 @@ pour la journée, ainsi que le formulaire pour confirmer votre présence et choi
 <h3>Invités supplémentaires et choix des repas</h3>
 
 <label>Invité 1</label>
-<input type="text" placeholder="Nom complet">
-
-<select>
+<input type="text" name="invite1" placeholder="Nom complet">
+<select name="repas1">
   <option>Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 2</label>
-<input type="text" placeholder="Nom complet">
-
-<select>
+<input type="text" name="invite2" placeholder="Nom complet">
+<select name="repas2">
   <option>Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 3</label>
-<input type="text" placeholder="Nom complet">
-
-<select>
+<input type="text" name="invite3" placeholder="Nom complet">
+<select name="repas3">
   <option>Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
 
 <label>Invité 4</label>
-<input type="text" placeholder="Nom complet">
-
-<select>
+<input type="text" name="invite4" placeholder="Nom complet">
+<select name="repas4">
   <option>Choix du repas</option>
   <option>Option 1</option>
   <option>Option 2</option>
@@ -438,25 +434,38 @@ Pour les familles plus nombreuses, veuillez inscrire le noms des enfants et leur
 </footer>
 
 <script>
-const form=document.getElementById('rsvpForm');
-const guestFields=document.getElementById('guestFields');
-document.querySelectorAll('input[name="attendance"]').forEach(r=>{
- r.addEventListener('change',()=>{
-   guestFields.style.display=r.value==="Oui"&&r.checked?"block":"none";
- });
-});
-form.addEventListener('submit',e=>{
- e.preventDefault();
- const data=Object.fromEntries(new FormData(form).entries());
- data.date_envoi=new Date().toISOString();
- const saved=JSON.parse(localStorage.getItem('rsvp_mariage')||'[]');
- saved.push(data);
- localStorage.setItem('rsvp_mariage',JSON.stringify(saved));
- document.getElementById('success').style.display='block';
- form.reset();
- guestFields.style.display='block';
- window.scrollTo({top:document.getElementById('success').offsetTop-120,behavior:'smooth'});
+const form = document.getElementById('rsvpForm');
+
+form.addEventListener('submit', async (e) => {
+
+  e.preventDefault();
+
+  const data = Object.fromEntries(
+      new FormData(form).entries()
+  );
+
+  try {
+
+    await fetch(
+      'https://script.google.com/macros/s/AKfycbyB_KVzQxSkDp5rslgXFPLL_g7WelExhHZFc1ankMYTnk1NGFOinAPY9uTucWCD21Ep/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify(data)
+      }
+    );
+
+    alert("Merci ! Votre réponse a bien été enregistrée.");
+
+    form.reset();
+
+  } catch (error) {
+
+    alert("Erreur lors de l'envoi.");
+
+  }
+
 });
 </script>
+
 </body>
 </html>
