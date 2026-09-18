@@ -146,14 +146,12 @@ font-family: 'Allura', cursive;
   color:var(--muted);
 }
 
-.card{
-background:var(--paper);
-border:1px solid var(--line);
-padding:28px;
-text-align:center;
-display:flex;
-flex-direction:column;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,300px));
 justify-content:center;
+gap:18px;
+margin-top:40px;
 }
 
 .card h3{
@@ -321,7 +319,7 @@ pour la journée, ainsi que le formulaire pour confirmer votre présence et choi
 <div class="timeline">
 <div class="event"><div class="time">14 h 45</div><div><strong>Arrivée des invités</strong><br><span class="note">Accueil et installation</span></div></div>
 <div class="event"><div class="time">15 h 00</div><div><strong>Cérémonie</strong><br><span class="note">Cérémonie de mariage</span></div></div>
-<div class="event"><div class="time">15 h 30</div><div><strong>Photos & cocktail</strong><br><span class="note">Musique et divertissements, pendant que nous prenons les photos</span></div></div>
+<div class="event"><div class="time">15 h 30</div><div><strong>Photos & cocktail</strong><br><span class="note">Musique et divertissements, pendant que nous capturons ces instants en souvenirs</span></div></div>
 <div class="event"><div class="time">18 h 00</div><div><strong>Souper</strong><br><span class="note">Service du repas et discours</span></div></div>
 <div class="event"><div class="time">20 h 00</div><div><strong>Soirée dansante</strong><br><span class="note">Musique, jeux, danse et célébration</span></div></div>
 </div>
@@ -373,9 +371,8 @@ pour la journée, ainsi que le formulaire pour confirmer votre présence et choi
 
 <select>
   <option>Choix du repas</option>
-  <option>Bœuf</option>
-  <option>Poulet</option>
-  <option>Végétarien</option>
+  <option>Option 1</option>
+  <option>Option 2</option>
 </select>
 
 <label>Invité 2</label>
