@@ -286,6 +286,13 @@ padding:20px;
 padding:120px 15px 50px;
 }
 }
+.success{
+  display:none;
+  margin-top:20px;
+  text-align:center;
+  color:green;
+  font-weight:bold;
+}  
 </style>
 </head>
 <body>
@@ -427,7 +434,6 @@ Pour les familles plus nombreuses, veuillez inscrire le noms des enfants et leur
 </p>
 
 <button type="submit">Envoyer ma réponse</button>
-<div class="success" id="success">Merci! Votre réponse a été enregistrée sur cet appareil. ❤️</div>
 </form>
 </div>
 </section>
@@ -458,9 +464,15 @@ form.addEventListener('submit', async (e) => {
       }
     );
 
-    alert('Merci ! Votre réponse a été enregistrée.');
+    document.getElementById('success').style.display = 'block';
 
-    form.reset();
+form.reset();
+
+window.scrollTo({
+  top: document.getElementById('success').offsetTop - 120,
+  behavior: 'smooth'
+});
+``
 
   } catch (error) {
 
